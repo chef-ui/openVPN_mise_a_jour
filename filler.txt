@@ -1,0 +1,1 @@
+Get-WinEvent -FilterHashtable @{LogName='Microsoft-Windows-TerminalServices-RDPClient/Operational'; StartTime=(Get-Date).AddMinutes(-10)} | Sort-Object TimeCreated | Format-Table TimeCreated, Id, Message -Wrap
